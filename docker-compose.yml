@@ -8,9 +8,13 @@ services:
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
       - portainer-data:/data
+      - /home/user/docker/docker-portainer/certs:/certs
     ports:
       - 9443:9443
       - 8000:8000
+    command:
+      --sslcert /certs/portainer.crt
+      --sslkey /certs/portainer.key
 
 volumes:
   portainer-data:
