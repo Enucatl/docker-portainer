@@ -5,6 +5,8 @@ services:
     image: portainer/portainer-ce:2.14.2
     container_name: portainer
     restart: always
+    networks:
+      - traefik_proxy
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
       - portainer-data:/data
@@ -18,3 +20,7 @@ services:
 
 volumes:
   portainer-data:
+
+networks:
+  traefik_proxy:
+    external: true
