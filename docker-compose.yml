@@ -14,7 +14,7 @@ services:
       # edge port
       # - 8000:8000
       # webGUI port
-      # - 9000:9000
+      # - 9443:9443
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.portainer.rule=Host(`portainer.nuc10i7fnh.home.arpa`)"
