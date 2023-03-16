@@ -16,6 +16,7 @@ services:
       # webGUI port
       # - 9443:9443
     labels:
+      - "checkmk_monitor=true"
       - "traefik.enable=true"
       - "traefik.http.routers.portainer.rule=Host(`portainer.nuc10i7fnh.home.arpa`)"
       - "traefik.http.routers.portainer.entrypoints=https"
