@@ -10,11 +10,11 @@ services:
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
       - portainer-data:/data
-    # ports:
+    ports:
       # edge port
       # - 8000:8000
       # webGUI port
-      # - 9443:9443
+      - 9443:9443
     labels:
       - "checkmk_monitor=true"
       - "traefik.enable=true"
